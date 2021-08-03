@@ -1,3 +1,3 @@
 # PythonProjects
 
-This repository contains all my Python Projects
+This repository contains Python Beginner Projects I have worked on
