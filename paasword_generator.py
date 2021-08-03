@@ -8,4 +8,11 @@ def password_generator(passwordLength):
     OUTPUT - password(str) - generated alphanumeric password
 
     """
-    
+
+    import string
+    import random
+
+    chars = string.ascii_lowercase + string.ascii_uppercase + string.digits 
+    password = ''.join(random.choice(chars) for i in range(passwordLength))
+
+    return 'Your password is ' + password
