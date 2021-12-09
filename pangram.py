@@ -33,7 +33,13 @@ def pangram(sentence):
 def is_pangram(s):
     s = s.lower()
     return all(letter in s for letter in string.ascii_lowercase)
-    
+
+
+###Best Solution
+def is_pangram(s):
+    return set(string.ascii_lowercase) <= set(s.lower())
+
+
 print(is_pangram('Amoke is a lovely damsel becfghi jkl mmmn pp qq rer ss tt uu vv ww xx yy zzz'))
 print(is_pangram( "The quick brown fox jumps over the lazy dog"))
 print(is_pangram("The quick, brown fox jumps over the lazy dog!"))
