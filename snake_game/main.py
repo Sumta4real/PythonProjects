@@ -37,7 +37,8 @@ while game_is_on:
     screen.onkey(snake.down,'Down')
     screen.onkey(snake.left,'Left')
     screen.onkey(snake.right,'Right')
-
+    
+    scoreboard.welcome(player_name)
     screen.update()
     time.sleep(0.1)
     snake.move()
