@@ -53,6 +53,15 @@ while game_is_on:
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.xcor() < -280:
         game_is_on = False
         scoreboard.game_over()
+        scoreboard.game_over()
+        replay_choice = screen.textinput(title='Try Again',prompt='Would you like to Play Again, Yes/No')
+        if scoreboard.replay(replay_choice):
+            game_is_on = True
+            scoreboard.reset_scoreboard()
+            snake.reset_snake()
+        else:
+            scoreboard.goodbye(player_name)
+            #scoreboard.reset_scoreboard()
     
     #Detect collision with the tail
     #if head collide with any segment in the tail, trigger game_over
