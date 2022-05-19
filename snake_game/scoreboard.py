@@ -42,6 +42,18 @@ class Scoreboard(Turtle):
                 file.write(f"{self.highscore}")
         self.score = 0
         self.update_scoreboard()
+        
+   def goodbye(self,player):
+        #self.reset_scoreboard()
+        self.clear()
+        self.player_name = player
+        self.goto(ORIGIN)
+        if self.score > self.highscore:
+            self.write(f"Thanks {self.player_name.capitalize()} for Playing.\n You Scored {self.score}. \n Current High score is {self.highscore}\n Congrats!!! You are the new highest Scorer", align=ALIGNMENT, font=FONT)
+            with open('./high_score.txt',mode='w') as file:
+                file.write(f"{self.score}")
+        else:
+            self.write(f'Thanks {self.player_name.capitalize()} for Playing.\n You Scored {self.score}. \n Current High score is {self.highscore}', align=ALIGNMENT, font=FONT)
     
         
         
