@@ -29,6 +29,7 @@ scoreboard = Scoreboard()
 
 
 game_is_on = True
+player_name = screen.textinput(title='Tell your name',prompt='What would you like to be called')
 while game_is_on:
     
     screen.listen()
