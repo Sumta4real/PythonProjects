@@ -34,6 +34,10 @@ class Scoreboard(Turtle):
         self.goto(x=0,y=0)
         self.write(f"GAME OVER!!!!", align=ALIGNMENT, font=FONT)
         
+    def replay(self,to_replay):
+        self.to_replay = to_replay
+        return self.to_replay.lower() == 'yes'
+        
    def reset_scoreboard(self):
         if self.score > self.highscore:
             self.highscore = self.score
