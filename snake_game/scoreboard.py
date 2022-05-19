@@ -14,6 +14,11 @@ class Scoreboard(Turtle):
         self.goto(x=0,y=270)
         self.hideturtle()
         self.update_scoreboard()
+        
+     def welcome(self,player):
+        self.player_name = player
+        self.goto(POSITION)
+        self.write(f'Welcome {self.player_name.capitalize()} to the Snake Game', align=ALIGNMENT, font=FONT)
 
     def update_scoreboard(self):
         self.clear()
